@@ -1,0 +1,112 @@
+$iconHeight: 3px;
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.navPrimaryList {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.npItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 2px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
+
+.npItemButton {
+  color: #bdbdbd;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 0;
+  background-color: rgba(0,0,0,.3);
+
+  .expanded & {
+    color: #fff;
+  }
+}
+
+.npItemButtonIcon {
+  pointer-events: none;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  transform: rotate(0deg);
+  background-color: rgba(0,0,0,.3);
+  border-radius: calc(22px / 2);
+  margin-left: 10px;
+  transition: transform 0.3s;
+
+  &::before {
+    // vertical line
+    content: '';
+    position: absolute;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-bottom: solid 2px #fff; // width of line
+    transform: rotate(90deg); // rotated = vertical line
+    width: 14px; // width shows line
+  }
+
+  &::after {
+    // horizontal line
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: solid 2px #fff; // width of horizontal line
+    margin: auto;
+  }
+
+  .expanded & {
+    // vertical line animated
+    transform: rotate(-180deg); // rotate circle
+
+    &::before {
+      width: 0; // zero width hides vertical line
+      transition: width 0.3s; // animate width shows verticl line
+    }
+  }
+}
+
+.navSecondaryList {
+  color: #fff;
+  display: none;
+  position: absolute;
+  background: crimson;
+  top: 100%;
+  width: 200px;
+  padding: 10px;
+  animation: animate .2s;
+
+  .expanded & {
+    display: block;
+  }
+}
