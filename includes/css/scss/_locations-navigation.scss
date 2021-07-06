@@ -1,0 +1,26 @@
+.locationsWrapper,
+.navPrimaryWrapper {
+  display: none;
+
+  @include mediaQueryMin(#{$containerMaxWidthValue}px) {
+    display: block;
+  }
+}
+
+.locationsListWrapper,
+.navPrimaryListWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.locationsList {
+  width: 400px;
+  height: 20px;
+  background-color: rgba(0,0,0,.3);
+}
+
+.navPrimaryList {
+  width: 500px;
+  height: 40px;
+  background-color: rgba(0,0,0,.3);
+}

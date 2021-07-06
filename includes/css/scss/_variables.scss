@@ -1,0 +1,7 @@
+$brandLineWeight: 2;
+$logoSizeValue: 50;
+$logoRadius: $logoSizeValue / 2;
+$containerMaxWidthValue: 1200;
+$logoLeftValue: 40;
+$brandLineGap: 10;
+$logoRightValue: $containerMaxWidthValue - $logoLeftValue - $logoSizeValue - ($brandLineGap * 2);

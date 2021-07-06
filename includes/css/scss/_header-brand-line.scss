@@ -1,0 +1,105 @@
+.headerBrandLineWrapper {
+  display: flex;
+  position: relative;
+  background-color: rgba(0,0,0,.7);
+}
+
+.brandLineWrapper {
+  
+  @include mediaQueryMin(#{$containerMaxWidthValue}px) {
+    background-color: rgba(255,255,255,.1);
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &::after {
+    content: "";
+    height: #{$brandLineWeight}px;
+    background-color: white;
+    width: 100%;
+  }
+}
+
+.logoDealerWrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  flex-direction: column;
+  
+  @include mediaQueryMin(800px) {
+    flex-direction: row;
+  }
+  
+  @include mediaQueryMin(#{$containerMaxWidthValue}px) {
+    padding: 0;
+   }
+
+  
+  &::before {
+    
+    @include mediaQueryMin(800px) {
+      content: "";
+      height: #{$brandLineWeight}px;
+      background-color: white;
+      width: #{$logoLeftValue}px;
+     }
+
+    @include mediaQueryMin(#{$containerMaxWidthValue}px) {
+     width: #{$logoLeftValue}px;
+    }
+  }
+}
+
+.headerLogoWrapper {
+  
+  @include mediaQueryMax(800px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    
+    &::before,
+    &::after {
+      content: "";
+      height: #{$brandLineWeight}px;
+      background-color: white;
+      flex: 1;
+    }
+  }
+}
+
+.headerLogo {
+  width: #{$logoSizeValue}px;
+  height: #{$logoSizeValue}px;
+  border-radius: #{$logoRadius}px;
+  border: 4px solid white;
+  margin: 0 #{$brandLineGap}px;
+}
+
+.headerDealerName {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  
+  @include mediaQueryMin(#{$containerMaxWidthValue}px) {
+    width: #{$logoRightValue}px;
+  }
+
+  &::after {
+    
+    @include mediaQueryMin(800px) {
+      content: "";
+      height: #{$brandLineWeight}px;
+      background-color: white;
+      flex: 1;
+    }
+  }
+}
+
+.headerDealerNameText {
+  margin-right: #{$brandLineGap}px;
+}
