@@ -1,15 +1,6 @@
-/* .container {
+.container {
   width: 100%;
   max-width: #{$containerMaxWidthValue}px;
   margin: auto;
   position: relative;
-} */
-
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 300px;
-  margin: 0;
-  padding: 10px 10px 100px 10px;
 }

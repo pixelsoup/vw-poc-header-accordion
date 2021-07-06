@@ -1,29 +1,12 @@
-$iconHeight: 3px;
-
-@keyframes animate {
-  from {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 .navPrimaryList {
   display: flex;
-  width: 100%;
-  height: auto;
+  justify-content: flex-end;
+  padding: 10px 0;
 }
 
 .npItem {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-left: 2px;
+  margin-left: 5px;
 
   &:first-of-type {
     margin-left: 0;
@@ -31,17 +14,18 @@ $iconHeight: 3px;
 }
 
 .npItemButton {
-  color: #bdbdbd;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
+  cursor: pointer;
   padding: 10px;
   border: 0;
   background-color: rgba(0,0,0,.3);
+  transition: background-color, 200ms ease-in-out;
 
   .expanded & {
-    color: #fff;
+    background-color: black;
   }
 }
 
@@ -60,6 +44,7 @@ $iconHeight: 3px;
     // vertical line
     content: '';
     position: absolute;
+    width: 14px; // width shows line
     height: 0;
     top: 0;
     bottom: 0;
@@ -68,7 +53,6 @@ $iconHeight: 3px;
     margin: auto;
     border-bottom: solid 2px #fff; // width of line
     transform: rotate(90deg); // rotated = vertical line
-    width: 14px; // width shows line
   }
 
   &::after {
@@ -93,20 +77,5 @@ $iconHeight: 3px;
       width: 0; // zero width hides vertical line
       transition: width 0.3s; // animate width shows verticl line
     }
-  }
-}
-
-.navSecondaryList {
-  color: #fff;
-  display: none;
-  position: absolute;
-  background: crimson;
-  top: 100%;
-  width: 200px;
-  padding: 10px;
-  animation: animate .2s;
-
-  .expanded & {
-    display: block;
   }
 }

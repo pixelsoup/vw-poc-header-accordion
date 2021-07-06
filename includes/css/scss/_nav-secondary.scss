@@ -1,0 +1,38 @@
+.navSecondaryList {
+  font-size: 13px;
+  color: #fff;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  animation: scaleGrow .2s;
+
+  .expanded & {
+    display: block;
+  }
+}
+
+.navSecondaryVehicles {
+  position: fixed;
+  width: 100%;
+  top: 120px;
+}
+
+.nsLink {
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  background-color: black;
+  transition: background-color 150ms ease-in-out;
+
+  &:hover {
+    background-color: #323232;
+  }
+}
+
+.hideNav {
+  display: none;
+}
