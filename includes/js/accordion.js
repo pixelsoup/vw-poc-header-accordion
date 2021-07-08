@@ -1,19 +1,24 @@
-const navAccordion = () => {
+// https://codepen.io/codeorum/pen/JjGzMRQ?editors=1010
+// https://codeorum.com/tutorials/simple-accordion-collapsible-element-with-vanilla-js-and-simple-animation-effect
+const accordionFunction = (accTargetElement, isOpenOnlyOne) => {
 
-  document.addEventListener('click', (primaryNavBtn) => {
-    if (!primaryNavBtn.target.matches('.js-npItemButton')) return
+  document.addEventListener('click', (clickHandler) => {
+    if (!clickHandler.target.matches(accTargetElement + ' .js-accBtn')) return
     else {
-      if (!primaryNavBtn.target.parentElement.classList.contains('expanded')) {
-        const npItems = document.querySelectorAll('.js-npItem')
-        Array.prototype.forEach.call(npItems, (primaryNavBtn) => {
-          primaryNavBtn.classList.remove('expanded')
-        })
-        primaryNavBtn.target.parentElement.classList.add('expanded')
+      if (!clickHandler.target.parentElement.classList.contains('expanded')) {
+        if (isOpenOnlyOne == true) {
+          const elementList = document.querySelectorAll(accTargetElement + ' .js-accPanel')
+          Array.prototype.forEach.call(elementList, (clickHandler) => {
+            clickHandler.classList.remove('expanded')
+          })
+        }
+        clickHandler.target.parentElement.classList.add('expanded')
       } else {
-        primaryNavBtn.target.parentElement.classList.remove('expanded')
+        clickHandler.target.parentElement.classList.remove('expanded')
       }
     }
   })
 }
 
-navAccordion()
+accordionFunction('#js-navPrimaryList', true)
+// accordionFunction('#js-navSecondaryMore', false)
