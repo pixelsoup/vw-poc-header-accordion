@@ -81,10 +81,17 @@
                   <span class="js-npItemButtonIcon npItemButtonIcon"></span>
                 </button>
                 <div class="navSecondaryList">
-                  <a href="#" class="nsLink">Some Link</a>
-                  <a href="#" class="nsLink">Another Link</a>
-                  <a href="#" class="nsLink">Some Link</a>
-                  <a href="#" class="nsLink">Another Link</a>
+
+                  <div id="js-navTertiaryAcc">
+                    <a data-toggle="collapse" class="ntTrigger collapsed" data-parent="#js-navTertiaryAcc" href="#js-NavTerItem1">Some Heading
+                      <span class="ntTriggerIcon"></span>
+                    </a>
+                    <div id="js-NavTerItem1" class="collapse">
+                      <a href="#" class="nsLink">Some Link</a>
+                      <a href="#" class="nsLink">Another Link</a>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div><!-- #js-navPrimaryList -->
@@ -93,5 +100,8 @@
       </div>
     </div>
     <script src="includes/js/accordion.js"></script>
+    <script src="includes/js/jquery1/dist/jquery.min.js"></script>
+    <script src="includes/js/unminified-source-versions/bootstrap3.1.1_collapse.js"></script>
+    <script src="includes/js/unminified-source-versions/bootstrap3.1.1_transitions.js"></script>
   </body>
 </html>
