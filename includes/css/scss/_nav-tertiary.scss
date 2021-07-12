@@ -1,31 +1,23 @@
 .ntTrigger {
   font-size: 13px;
   text-decoration: none;
-  color: #fff;
+  color: $white;
   padding: 10px;
-  background-color: black;
+  background-color: $black;
   transition: background-color 150ms ease-in-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  // &:hover {
-  //   background-color: #323232;
-  // }
-
-  // &.collapsed {
-  //   background-color: #323232;
-  // }
 }
 
 .ntTriggerIcon {
   pointer-events: none;
-  width: 22px;
-  height: 22px;
+  width: #{$navTriggerIconSize}px;
+  height: #{$navTriggerIconSize}px;
   position: relative;
   transform: rotate(0deg);
-  background-color: black;
-  border-radius: calc(22px / 2);
+  background-color: $black80;
+  border-radius: #{$navTriggerIconRadius}px;
   margin-left: 10px;
   transition: transform 0.3s;
   display: inline-block;
@@ -41,7 +33,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    border-bottom: solid 2px #fff; // width of line
+    border-bottom: solid 2px $white; // width of line
     transform: rotate(90deg); // rotated = vertical line
   }
 
@@ -55,7 +47,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    border-bottom: solid 2px #fff; // width of horizontal line
+    border-bottom: solid 2px $white; // width of horizontal line
     margin: auto;
   }
 
@@ -73,13 +65,13 @@
 .ntLink {
   font-size: 13px;
   text-decoration: none;
-  color: #fff;
+  color: $white;
   display: block;
   padding: 10px;
-  background-color: #323232;
+  background-color: $black80;
   transition: background-color 150ms ease-in-out;
 
   &:hover {
-    background-color: #404040;
+    background-color: $black75;
   }
 }

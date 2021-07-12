@@ -1,6 +1,6 @@
 .navSecondaryList {
   font-size: 13px;
-  color: #fff;
+  color: $white;
   display: none;
   position: absolute;
   top: 100%;
@@ -22,14 +22,14 @@
 .nsLink {
   font-size: 13px;
   text-decoration: none;
-  color: #fff;
+  color: $white;
   display: block;
   padding: 10px;
-  background-color: black;
+  background-color: $black;
   transition: background-color 150ms ease-in-out;
 
   &:hover {
-    background-color: #323232;
+    background-color: $black80;
   }
 }
 
