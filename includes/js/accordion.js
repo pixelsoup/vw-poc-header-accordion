@@ -21,4 +21,3 @@ const accordionFunction = (accTargetElement, isOpenOnlyOne) => {
 }
 
 accordionFunction('#js-navPrimaryList', true)
-// accordionFunction('#js-navSecondaryMore', false)
