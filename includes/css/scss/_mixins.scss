@@ -9,3 +9,42 @@
     @content;
   }
 }
+
+@mixin navItemTriggerSymbol {
+  pointer-events: none;
+  width: #{$navTriggerIconSize}px;
+  height: #{$navTriggerIconSize}px;
+  position: relative;
+  transform: rotate(0deg);
+  background-color: rgba(0,0,0,.3);
+  border-radius: #{$navTriggerIconRadius}px;
+  transition: transform 0.3s;
+}
+
+// navigation trigger symbol - vertical line
+@mixin plusMinusVerticalLine {
+  content: '';
+  position: absolute;
+  height: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-bottom: solid 2px $white; // width of line
+  transform: rotate(90deg); // rotated = vertical line
+}
+
+// navigation trigger symbol - horizontal line
+@mixin plusMinusHorizontalLine {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: solid 2px $white; // width of horizontal line
+  margin: auto;
+}
